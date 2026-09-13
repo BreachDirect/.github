@@ -1,30 +1,19 @@
 # BreachDirect
 
-Open-source security infrastructure for the Stellar / Soroban ecosystem.
+We build developer tooling for security and verifiability — scanners,
+provenance, and contract-testing harnesses that slot into CI.
 
-We build tooling that makes Soroban development more secure, verifiable, and
-auditable — for contract teams and the exchanges, wallets, and custodians they
-deploy to.
+The tools ship as CLIs and GitHub Actions, report in SARIF / JSON / Markdown,
+and come with tests, CI, and security checks enabled from day one.
 
 ## Projects
 
 | Project | What it does |
 |---|---|
-| [sorseal](https://github.com/BreachDirect/sorseal) | Provenance + security scanner for Soroban/WASM artifacts. Rebuild, hash, and seal deployed bytecode to a signed manifest; verify on-chain; scan source and WASM for 16 known vulnerability patterns (missing auth, reentrancy, oracle manipulation). Rust CLI + GitHub Action. |
-| [stellargate](https://github.com/BreachDirect/stellargate) | Unity DevSecOps gate for Stellar projects — contract scanning, API contract locking, and secrets scanning as one CLI with a single pass/fail report. |
+| [sorseal](https://github.com/BreachDirect/sorseal) | Provenance + security scanning for WASM artifacts. Rebuild, hash, and seal deployed bytecode to a signed manifest, verify the deployed contract matches the source, and scan source + binary for 16 vulnerability patterns. Rust CLI + GitHub Action. |
+| [stellargate](https://github.com/BreachDirect/stellargate) | DevSecOps gate — contract scanning, API contract locking, and secrets scanning as one CLI with a single pass/fail report. |
+| [RytScan](https://github.com/BreachDirect/RytScan) | Zero-config static security scanner for smart contracts, with SARIF output and a CI merge gate. |
 | [stellar-pathfinder](https://github.com/BreachDirect/stellar-pathfinder) | Cross-border remittance route finder for Stellar anchors, ranked by compounded fee and time. |
-| [RytScan](https://github.com/BreachDirect/RytScan) | Zero-config static security scanner for Soroban smart contracts with SARIF output and a CI merge gate. |
-| [schemalock](https://github.com/BreachDirect/schemalock) | Declarative API contract test harness for Stellar backends. |
-| [shieldscan](https://github.com/BreachDirect/shieldscan) | AI-assisted web vulnerability assessment for small businesses. |
-| [vaultsweep](https://github.com/BreachDirect/vaultsweep) | Stellar-aware secrets scanner for repos and CI. |
-
-## Wave 9
-
-Part of the [Stellar Drips Wave 9](https://www.drips.network/wave/stellar)
-program. The fastest ways to get involved:
-
-1. Pick a [`good-first-issue`](https://github.com/BreachDirect/sorseal/labels/good-first-issue) — small, scoped, guided.
-2. Run `sorseal analyze` against your own contract and report what you find.
-3. Add a detection rule — new Soroban issue classes are great intermediate tasks.
-
-Every project here ships with CI, tests, and security checks enabled.
+| [schemalock](https://github.com/BreachDirect/schemalock) | Declarative API contract test harness — one YAML file locks error envelopes, auth boundaries, and status code contracts across releases. |
+| [shieldscan](https://github.com/BreachDirect/shieldscan) | Practical web vulnerability assessment for small businesses — automated scanning with plain-English remediation guidance. |
+| [vaultsweep](https://github.com/BreachDirect/vaultsweep) | Secrets scanner for repos and CI that catches leaked keys, tokens, and default credentials before merge. |
